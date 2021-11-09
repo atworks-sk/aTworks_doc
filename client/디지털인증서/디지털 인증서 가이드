@@ -1,0 +1,17 @@
+1 cer과 pvk파일 생성
+makecert -n "CN=SKFinanceDigital" -r -sv  ca.pvk ca.cer
+
+비번 : skcc1234
+
+2 spc파일이 생성 : 
+cert2spc.exe ca.cer ca.spc
+
+3 ca.cer을 인증기관으로 등록절차 
+certmgr.exe -add ca.cer -s -r localMachine root 
+
+4. exe 파일 인증작업 
+signtool signwizard
+
+
+SK Finance Digital https://www.skcc.com
+https://www.skcc.com
